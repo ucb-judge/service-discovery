@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ucb-judge-service-discovery
+  cloud:
+    config:
+      import-check:
+        enabled: false
+eureka:
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+
+server:
+  port: 8711
