@@ -1,14 +1,14 @@
 spring:
   application:
-    name: ucb-judge-service-discovery
-  cloud:
-    config:
-      import-check:
-        enabled: false
+    name: uj-service-discovery
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_URI:http://localhost:9411}
+
 eureka:
   client:
-    fetchRegistry: false
-    registerWithEureka: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URI:http://localhost:8761/eureka/}
 
 server:
   port: 8711
