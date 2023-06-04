@@ -12,4 +12,4 @@ eureka:
       defaultZone: ${EUREKA_SERVER_URI:http://localhost:8711/eureka/}
 
 server:
-  port: 8711
+  port: ${PORT:8711}
